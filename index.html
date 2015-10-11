@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>QuestMenu</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="push-body">
+
+  <!-- Выбор города -->
+  <div id="cities" class="side-menu right">
+    <a class="menu-close" href="#"><i class="icon icon-close"></i></a>
+    <ul>
+      <li><a class="city" href="#">Москва</a></li>
+      <li><a class="city active" href="#">Санкт-Петербург</a></li>
+      <li><a class="city" href="#">Ростов-на-Дону</a></li>
+      <li><a class="city" href="#">Екатеринбург</a></li>
+      <li><a class="city" href="#">Калининград</a></li>
+      <li><a class="city" href="#">Тула</a></li>
+    </ul>
+  </div>
+
+  <!-- Шапка -->
+  <div id="header">
+    <div class="container">
+      <div id="logo"><a href="index.html"><span class="icon icon-logo"></span> QUESTMENU</a></div>
+      <div id="nav">
+        <ul id="menu">
+          <li><a class="active" href="index.html"><span class="inner">Расписание</span></a></li>
+          <li><a href="map.html"><span class="inner">Карта</span></a></li>
+          <li><a href="coupons.html"><span class="inner">Купоны</span></a></li>
+          <li><a id="city-sel" href="#"><span class="icon icon-marker"></span> <span class="inner underline">Санкт-Петербург</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- "Главный" раздел -->
+  <div class="section section-intro">
+    <div class="container">
+      <h1><big>Расписание</big> всех квестов в реальности в Санкт-Петербурге</h1>
+    </div>
+  </div>
+
+  <!-- Фильтры -->
+  <div class="section section-filters">
+    <div class="container">
+      <div id="filters" class="clr">
+        <div id="filters-desktop" class="side-menu left">
+          <a class="menu-close" href="#"><i class="icon icon-close"></i></a>
+          <ul>
+            <li><a class="filter active" href="#">Все квесты</a></li>
+            <li><a class="filter" href="#">Технологичные</a></li>
+            <li><a class="filter" href="#">Страшные</a></li>
+            <li><a class="filter" href="#">Детективы</a></li>
+            <li><a class="filter" href="#">Больше 4 человек</a></li>
+            <li><a class="filter" href="#">Для начинающих</a></li>
+            <li><a class="filter" href="#">Для квестоманов</a></li>
+            <li><a class="filter" href="#">С детьми</a></li>
+            <li><a class="filter" href="#">Перформансы</a></li>
+            <li><a class="filter" href="#">Ограбления банков</a></li>
+            <li><a class="filter" href="#">Антуражные</a></li>
+          </ul>
+        </div>
+        <ul id="filters-mobile">
+          <li><a id="filter-sel" href="#"><span class="icon icon-menu"></span> <span class="hidden">Фильтры</span></a></li>
+          <li><a class="active" href="#"><span class="inner">Новые</span></a></li>
+          <li><a href="#"><span class="inner">Популярные</span></a></li>
+          <li><a href="#"><span class="inner">Рядом</span></a></li>
+        </ul>
+      </div>
+      
+      <div id="date" class="clr">
+        <label class="date-label label">Дата проведения:</label>
+        <div class="date-container">
+          <div class="item active"><span class="num">28</span> <span class="month">СЕН</span> <span class="dow">ПН</span></div>
+          <div class="item"><span class="num">29</span> <span class="month">СЕН</span> <span class="dow">ВТ</span></div>
+          <div class="item"><span class="num">30</span> <span class="month">СЕН</span> <span class="dow">СР</span></div>
+          <div class="item"><span class="num">01</span> <span class="month">ОКТ</span> <span class="dow">ЧТ</span></div>
+          <div class="item"><span class="num">02</span> <span class="month">ОКТ</span> <span class="dow">ПТ</span></div>
+          <div class="item"><span class="num">03</span> <span class="month">ОКТ</span> <span class="dow">СБ</span></div>
+          <div class="item"><span class="num">04</span> <span class="month">ОКТ</span> <span class="dow">ВС</span></div>
+          <div class="item"><span class="num">05</span> <span class="month">ОКТ</span> <span class="dow">ПН</span></div>
+          <div class="item"><span class="num">06</span> <span class="month">ОКТ</span> <span class="dow">ВТ</span></div>
+          <div class="item"><span class="num">07</span> <span class="month">ОКТ</span> <span class="dow">СР</span></div>
+        </div>
+      </div>
+      
+      <div id="time" class="js-time clr">
+        <div class="timerange">
+          <div class="title">Время проведения:</div>
+          <div class="timeselect">
+            <span class="timeselect-item js-time__select-range timeselect-active" data-from="0" data-to="86400"><u>Весь день</u></span>
+            <span class="timeselect-item js-time__select-range" data-from="21600" data-to="43200"><u>Утром</u></span>
+            <span class="timeselect-item js-time__select-range" data-from="43200" data-to="64800"><u>Днем</u></span>
+            <span class="timeselect-item js-time__select-range" data-from="64800" data-to="86400"><u>Вечером</u></span>
+          </div>
+        </div>
+        <div class="timeline js-time__range" data-bounds="0,86400">
+          <div class="day js-time__line">
+            <div class="myline js-time__range-line">
+              <div class="myline-bg"></div>
+              <div class="myline-begin js-time__from-slider"><span class="value">00:00</span></div>
+              <div class="myline-end js-time__to-slider"><span class="value">03:00</span></div>
+              <input type="hidden" class="js-time__from-field" name="time" value="0"><input type="hidden" class="js-time__to-field" name="time" value="86400">
+            </div>
+            <span class="item"><i class="icon icon-time00"></i><span class="value">00:00</span></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"><span class="value">03:00</span></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"><i class="icon icon-time06"></i><span class="value">06:00</span></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"><span class="value">09:00</span></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"><i class="icon icon-time12"></i><span class="value">12:00</span></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"><span class="value">15:00</span></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"><i class="icon icon-time18"></i><span class="value">18:00</span></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"><span class="value">21:00</span></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item last"><i class="icon icon-time00"></i><span class="value">00:00</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="days" class="clr">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">29</div>
+            <div class="swiper-slide">30</div>
+            <div class="swiper-slide">31</div>
+            <div class="swiper-slide">01</div>
+            <div class="swiper-slide">02</div>
+            <div class="swiper-slide">03</div>
+            <div class="swiper-slide">04</div>
+            <div class="swiper-slide">05</div>
+            <div class="swiper-slide">06</div>
+            <div class="swiper-slide">07</div>
+            <div class="swiper-slide">08</div>
+            <div class="swiper-slide">09</div>
+            <div class="swiper-slide">10</div>
+            <div class="swiper-slide">11</div>
+            <div class="swiper-slide">12</div>
+            <div class="swiper-slide">13</div>
+            <div class="swiper-slide">14</div>
+            <div class="swiper-slide">15</div>
+            <div class="swiper-slide">16</div>
+            <div class="swiper-slide">17</div>
+            <div class="swiper-slide">18</div>
+            <div class="swiper-slide">19</div>
+            <div class="swiper-slide">20</div>
+          </div>
+          <div class="swiper-button swiper-button-prev"></div>
+          <div class="swiper-button swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Расписание -->
+  <div class="section section-book">
+    <div class="container">
+
+      <div class="booking">
+        <div class="bookrow">
+          <h3 class="quest"><a class="author" href="#"><span class="inner">Клаустрофобия</span></a> <span class="name">Последняя загадка Леонардо</span> <span class="metro"><span class="icon icon-metrospb"></span> Пролетарская</span></h3>
+          <ul class="time">
+            <li><a class="slot discount" href="booking.html">13:00 <span class="price">2000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">14:20 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">15:40 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">17:00 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">18:20 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">19:40 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">21:00 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">22:20 <span class="price">3500 <span class="rub">руб.</span></span></a></li>
+          </ul>
+        </div>
+        <div class="bookrow">
+          <h3 class="quest"><a class="author" href="#"><span class="inner">Паутина</span></a> <span class="name">Психиатрическая больница</span> <span class="metro"><span class="icon icon-metrospb"></span> Бульвар Дмитрия Донского</span></h3>
+          <ul class="time">
+            <li><a class="slot discount" href="booking.html">14:20 <span class="price">2000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot discount" href="booking.html">15:40 <span class="price">2000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">17:00 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">18:20 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">19:40 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">21:00 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">22:20 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+          </ul>
+        </div>
+        <div class="bookrow">
+          <h3 class="quest"><a class="author" href="#"><span class="inner">Кубиринт</span></a> <span class="name">Штрана: Господин Президент</span> <span class="metro"><span class="icon icon-metrospb"></span> Красносельская</span></h3>
+          <ul class="time">
+            <li><a class="slot discount" href="booking.html">09:00 <span class="price">2000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">10:20 <span class="price">2000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">11:40 <span class="price">2000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot discount" href="booking.html">13:00 <span class="price">2000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">14:20 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">15:40 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">17:00 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">18:20 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">19:40 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">21:00 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">22:20 <span class="price">3500 <span class="rub">руб.</span></span></a></li>
+          </ul>
+        </div>
+        <div class="bookrow">
+          <h3 class="quest"><a class="author" href="#"><span class="inner">Zona Quest</span></a> <span class="name">Автосервис</span> <span class="metro"><span class="icon icon-metrospb"></span> Бульвар Рокоссовского</span></h3>
+          <ul class="time">
+            <li><a class="slot discount" href="booking.html">13:00 <span class="price">2000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">14:20 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">15:40 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">17:00 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">18:20 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">19:40 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">21:00 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">22:20 <span class="price">3500 <span class="rub">руб.</span></span></a></li>
+          </ul>
+        </div>
+        <div class="bookrow">
+          <h3 class="quest"><a class="author" href="#"><span class="inner">Интуиция</span></a> <span class="name">Игры разума</span> <span class="metro"><span class="icon icon-metrospb"></span> Александровский сад</span></h3>
+          <ul class="time">
+            <li><a class="slot discount" href="booking.html">13:00 <span class="price">2000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">14:20 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">15:40 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">17:00 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">18:20 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">19:40 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">21:00 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">22:20 <span class="price">3500 <span class="rub">руб.</span></span></a></li>
+          </ul>
+        </div>
+        <div class="bookrow">
+          <h3 class="quest"><a class="author" href="#"><span class="inner">Лаб.33</span></a> <span class="name">Студия звукозаписи</span> <span class="metro"><span class="icon icon-metrospb"></span> Улица Старокачаловская</span></h3>
+          <ul class="time">
+            <li><a class="slot discount" href="booking.html">13:00 <span class="price">2000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">14:20 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">15:40 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">17:00 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">18:20 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">19:40 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">21:00 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">22:20 <span class="price">3500 <span class="rub">руб.</span></span></a></li>
+          </ul>
+        </div>
+        <div class="bookrow">
+          <h3 class="quest"><a class="author" href="#"><span class="inner">В Подвале</span></a> <span class="name">Черепашки против Шреддера</span> <span class="metro"><span class="icon icon-metrospb"></span> Крестьянская застава</span></h3>
+          <ul class="time">
+            <li><a class="slot discount" href="booking.html">09:00 <span class="price">2000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot discount" href="booking.html">10:20 <span class="price">2000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">11:40 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">18:20 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">19:40 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">21:00 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">22:20 <span class="price">3500 <span class="rub">руб.</span></span></a></li>
+          </ul>
+        </div>
+        <div class="bookrow">
+          <h3 class="quest"><a class="author" href="#"><span class="inner">EscapeGames</span></a> <span class="name">Кинотеатр забвения</span> <span class="metro"><span class="icon icon-metrospb"></span> Улица Академика Королёва</span></h3>
+          <ul class="time">
+            <li><a class="slot discount" href="booking.html">13:00 <span class="price">2000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">14:20 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">15:40 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">17:00 <span class="price">2500 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">18:20 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot booked" href="booking.html">19:40 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">21:00 <span class="price">3000 <span class="rub">руб.</span></span></a></li>
+            <li><a class="slot" href="booking.html">22:20 <span class="price">3500 <span class="rub">руб.</span></span></a></li>
+          </ul>
+        </div>
+        
+        <a class="loadmore" href="#">Загрузить ещё</a>
+        
+      </div>
+
+    </div>
+  </div>
+  
+  <!-- Текст -->
+  <div class="section section-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>Лучшие квесты в реальности</h2>
+          <p>На текущий момент в Москве представлено более 200 эскейп-румов (включая <a href="/klaustrofobija.html">Клаустрофобию</a>), поэтому мы особенно гордимся, что смогли сделать одни из лучших квестов в реальности в Москве, которые нравятся участникам вне зависимости от возраста. Так, Элемент Z, по мнению Гильдии Квестов — отличный вариант квеста для детей.</p>
+          <p>Играть в квесты можно в команде из 2-4 человек. Возраст неограничен — самому младшему нашему участнику был годик, самому почтенному — 72 года. Наша студия находится в центре Москвы — <a href="/book.html">записывайтесь на квесты</a> в разделе «Бронирование» и приходите к нам. Лучше прийти за 15 минут до времени записи — мы угостим вас чаем с печеньками и расскажем предысторию квеста, чтобы вы могли получить максимальное удовольствия от визита и игры.</p>
+          <p>Взаимодействуйте с окружающими предметами и устройствами, применяйте логику и интуицию для того, чтобы разгадать головоломки, добыть ключи и победить!</p>
+        </div>
+        <div class="col-md-4">
+          <img class="responsive" src="images/quest.png" alt="Лучшие квесты в реальности" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Подвал -->
+  <div id="footer">
+    <div class="container text-center">
+      &copy; 2015 <strong>QUESTMENU.</strong> Лучшие квесты в вашем городе.
+      <a class="email" href="mailto:info@questmenu.ru">info@questmenu.ru</a>
+      <a class="social fb" href="http://facebook.com/questmenu"><span class="icon icon-facebook"></span></a>
+      <a class="social vk" href="http://vk.com/questmenu"><span class="icon icon-vkontakte"></span></a>
+    </div>
+  </div>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/range.js"></script>
+  <script src="js/init.js"></script>
+
+</body>
+</html>

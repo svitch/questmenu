@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>QuestMenu</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="push-body">
+
+  <!-- Выбор города -->
+  <div id="cities" class="side-menu right">
+    <a class="menu-close" href="#"><i class="icon icon-close"></i></a>
+    <ul>
+      <li><a class="city" href="#">Москва</a></li>
+      <li><a class="city active" href="#">Санкт-Петербург</a></li>
+      <li><a class="city" href="#">Ростов-на-Дону</a></li>
+      <li><a class="city" href="#">Екатеринбург</a></li>
+      <li><a class="city" href="#">Калининград</a></li>
+      <li><a class="city" href="#">Тула</a></li>
+    </ul>
+  </div>
+
+  <!-- Шапка -->
+  <div id="header">
+    <div class="container">
+      <div id="logo"><a href="index.html"><span class="icon icon-logo"></span> QUESTMENU</a></div>
+      <div id="nav">
+        <ul id="menu">
+          <li><a href="index.html"><span class="inner">Расписание</span></a></li>
+          <li><a href="map.html"><span class="inner">Карта</span></a></li>
+          <li><a class="active" href="coupons.html"><span class="inner">Купоны</span></a></li>
+          <li><a id="city-sel" href="#"><span class="icon icon-marker"></span> <span class="inner underline">Санкт-Петербург</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- "Главный" раздел -->
+  <div class="section section-intro">
+    <div class="container">
+      <h1><big>Купоны</big> скидки на квесты в Москве</h1>
+    </div>
+  </div>
+
+  <!-- Фильтры -->
+  <div class="section section-filters">
+    <div class="container">
+      <div id="filters" class="clr">
+        <div id="filters-desktop" class="side-menu left">
+          <a class="menu-close" href="#"><i class="icon icon-close"></i></a>
+          <ul>
+            <li><a class="filter" href="#">Все квесты</a></li>
+            <li><a class="filter" href="#">Технологичные</a></li>
+            <li><a class="filter" href="#">Страшные</a></li>
+            <li><a class="filter" href="#">Детективы</a></li>
+            <li><a class="filter" href="#">Больше 4 человек</a></li>
+            <li><a class="filter active" href="#">Для начинающих</a></li>
+            <li><a class="filter" href="#">Для квестоманов</a></li>
+            <li><a class="filter active" href="#">С детьми</a></li>
+            <li><a class="filter" href="#">Перформансы</a></li>
+            <li><a class="filter" href="#">Ограбления банков</a></li>
+            <li><a class="filter" href="#">Антуражные</a></li>
+          </ul>
+        </div>
+        <ul id="filters-mobile">
+          <li><a id="filter-sel" href="#"><span class="icon icon-menu"></span> <span class="hidden">Фильтры</span></a></li>
+          <li><a class="active" href="#"><span class="inner">Новые</span></a></li>
+          <li><a href="#"><span class="inner">Популярные</span></a></li>
+          <li><a href="#"><span class="inner">Рядом</span></a></li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <div class="location col-md-12">
+          <label class="location-label label">Расположение квест-комнаты:</label>
+          <div class="location-dropdown dropdown">
+            <span class="icon icon-marker"></span>
+            <input type="text" placeholder="например, Москва">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Купоны -->
+  <div class="section section-book">
+    <div class="container">
+      <div id="coupons">
+      
+        <div class="coupon">
+          <div class="image">
+            <img src="images/demo/rashititel.jpg" alt="Расхитители гробниц">
+            <p class="dscnt"><span class="inside">&ndash;<span class="num">25</span>%</span></p>
+          </div>
+          <div class="text">
+            <h2 class="clr">
+              <span class="name">Последняя загадка Леонардо</span>
+              <a class="company" href="#">Rabbit Hole</a>
+              <span class="metro"><span class="icon-metro"></span> Невский проспект</span>
+            </h2>
+            <div class="rating clr">
+              <div class="rate-total"><span class="name">рейтинг</span> <span class="num">5.0</span> <span class="total">из 10</span></div>
+              <div class="rate"><span class="name">realquest</span> <span class="num">5.0</span></div>
+              <div class="rate"><span class="name">questquild</span> <span class="num">5.2</span></div>
+              <div class="rate"><span class="name">questfinder</span> <span class="num">4.8</span></div>
+              <div class="rate"><span class="name">mirkvestov</span> <span class="num">5.0</span></div>
+              <div class="rate"><span class="name">tripadvisor</span> <span class="num">5.0</span></div>
+            </div>
+            <div class="discounted clr">
+              <div class="list clr">
+                <div class="item"><span class="period">пн<span class="dash">&mdash;</span>пт</span> <big>1000 <span class="rub">руб.</span></big> <strike>1500 <span class="rub">руб.</span></strike></div>
+                <div class="item"><span class="period">сб<span class="dash">&mdash;</span>вс</span> <big>1250 <span class="rub">руб.</span></big> <strike>2000 <span class="rub">руб.</span></strike></div>
+              </div>
+              <p class="link"><a class="getcoupon" href="#">Получить скидку</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="coupon">
+          <div class="image">
+            <img src="images/demo/srednzamok.jpg" alt="Средневековый замок">
+            <p class="dscnt"><span class="inside">&ndash;<span class="num">20</span>%</span></p>
+          </div>
+          <div class="text">
+            <h2 class="clr">
+              <span class="name">Средневековый замок</span>
+              <a class="company" href="#">Клаустрофобия</a>
+              <span class="metro"><span class="icon-metro"></span> Лубянка</span>
+            </h2>
+            <div class="rating clr">
+              <div class="rate-total"><span class="name">рейтинг</span> <span class="num">4.3</span> <span class="total">из 10</span></div>
+              <div class="rate"><span class="name">realquest</span> <span class="num">4.0</span></div>
+              <div class="rate"><span class="name">questquild</span> <span class="num">4.2</span></div>
+              <div class="rate"><span class="name">mirkvestov</span> <span class="num">4.6</span></div>
+            </div>
+            <div class="discounted clr">
+              <div class="list clr">
+                <div class="item"><span class="period">пн<span class="dash">&mdash;</span>пт</span> <big>1250 <span class="rub">руб.</span></big> <strike>2000 <span class="rub">руб.</span></strike></div>
+                <div class="item"><span class="period">пн<span class="dash">&mdash;</span>пт</span> <big>2250 <span class="rub">руб.</span></big> <strike>2700 <span class="rub">руб.</span></strike></div>
+              </div>
+              <p class="link"><a class="getcoupon" href="#">Получить скидку</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="coupon">
+          <div class="image">
+            <img src="images/demo/labfranken.jpg" alt="Лаборатория Франкенштейна">
+            <p class="dscnt"><span class="inside">&ndash;<span class="num">15</span>%</span></p>
+          </div>
+          <div class="text">
+            <h2 class="clr">
+              <span class="name">Лаборатория Франкенштейна</span>
+              <a class="company" href="#">Паутина</a>
+              <span class="metro"><span class="icon-metro"></span> Чистые пруды</span>
+            </h2>
+            <div class="rating clr">
+              <div class="rate-total"><span class="name">рейтинг</span> <span class="num">9.2</span> <span class="total">из 10</span></div>
+              <div class="rate"><span class="name">realquest</span> <span class="num">9.0</span></div>
+              <div class="rate"><span class="name">questquild</span> <span class="num">9.2</span></div>
+              <div class="rate"><span class="name">mirkvestov</span> <span class="num">9.6</span></div>
+              <div class="rate"><span class="name">tripadvisor</span> <span class="num">8.6</span></div>
+            </div>
+            <div class="discounted clr">
+              <div class="list clr">
+                <div class="item"><span class="period">пн<span class="dash">&mdash;</span>пт</span> <big>2250 <span class="rub">руб.</span></big> <strike>2700 <span class="rub">руб.</span></strike></div>
+                <div class="item"><span class="period">пн<span class="dash">&mdash;</span>пт</span> <big>2750 <span class="rub">руб.</span></big> <strike>3200 <span class="rub">руб.</span></strike></div>
+              </div>
+              <p class="link"><a class="getcoupon" href="#">Получить скидку</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+  <!-- Текст -->
+  <div class="section section-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>Лучшие квесты в реальности</h2>
+          <p>На текущий момент в Москве представлено более 200 эскейп-румов (включая <a href="/klaustrofobija.html">Клаустрофобию</a>), поэтому мы особенно гордимся, что смогли сделать одни из лучших квестов в реальности в Москве, которые нравятся участникам вне зависимости от возраста. Так, Элемент Z, по мнению Гильдии Квестов — отличный вариант квеста для детей.</p>
+          <p>Играть в квесты можно в команде из 2-4 человек. Возраст неограничен — самому младшему нашему участнику был годик, самому почтенному — 72 года. Наша студия находится в центре Москвы — <a href="/book.html">записывайтесь на квесты</a> в разделе «Бронирование» и приходите к нам. Лучше прийти за 15 минут до времени записи — мы угостим вас чаем с печеньками и расскажем предысторию квеста, чтобы вы могли получить максимальное удовольствия от визита и игры.</p>
+          <p>Взаимодействуйте с окружающими предметами и устройствами, применяйте логику и интуицию для того, чтобы разгадать головоломки, добыть ключи и победить!</p>
+        </div>
+        <div class="col-md-4">
+          <img class="responsive" src="images/quest.png" alt="Лучшие квесты в реальности" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Подвал -->
+  <div id="footer">
+    <div class="container text-center">
+      &copy; 2015 <strong>QUESTMENU.</strong> Лучшие квесты в вашем городе.
+      <a class="email" href="mailto:info@questmenu.ru">info@questmenu.ru</a>
+      <a class="social fb" href="http://facebook.com/questmenu"><span class="icon icon-facebook"></span></a>
+      <a class="social vk" href="http://vk.com/questmenu"><span class="icon icon-vkontakte"></span></a>
+    </div>
+  </div>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/init.js"></script>
+
+</body>
+</html>
